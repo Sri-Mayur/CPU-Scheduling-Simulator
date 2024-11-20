@@ -37,25 +37,26 @@
     <!-- Question Section -->
     <section class="container_docs">
         <h2>What is CPU Scheduling?</h2>
-        <p>CPU Scheduling is a process of determining which process will own CPU for execution while another process is
-            on hold. The main task of CPU scheduling is to make sure that whenever the CPU remains idle, the OS at least
-            select one of the processes available in the ready queue for execution. The selection process will be
-            carried out by the CPU scheduler. It selects one of the processes in memory that are ready for execution.
-        </p>
+        <p>Think of the CPU as a pizza oven and processes as pizzas waiting to bake. 
+        The CPU scheduler is the shopkeeper deciding which pizza goes in next. If one
+         pizza takes too long, another ready pizza gets baked to keep things moving. The
+          goal is to ensure the oven (CPU) never sits idle. Everyone eventually gets their 
+          pizza, and the system runs smoothly! 🍕💻
     </section>
 
     <section class="container_docs" data-aos="zoom-in-up">
         <h2>Why CPU Scheduling?</h2>
-        <p>A typical process involves both I/O time and CPU time. In a uni programming system like MS-DOS, time spent
-            waiting for I/O is wasted and CPU is free during this time. In multi programming systems, one process can
-            use CPU while another is waiting for I/O. This is possible only with process scheduling.<br><br>
+        <p>In simple terms, processes need both CPU and I/O time. In single-task systems like
+             MS-DOS, the CPU sits idle while waiting for I/O. But in multitasking systems, one
+             process uses the CPU while another waits for I/O. This smart juggling of tasks
+             is achieved through process scheduling.<br><br>
             <strong>Objectives of Process Scheduling Algorithm</strong>
-            <li>Max CPU utilization [Keep CPU as busy as possible]</li>
-            <li>Fair allocation of CPU.</li>
-            <li>Max throughput [Number of processes that complete their execution per time unit]</li>
-            <li>Min turnaround time [Time taken by a process to finish execution]</li>
-            <li>Min waiting time [Time a process waits in ready queue]</li>
-            <li>Min response time [Time when a process produces first response]</li>
+            <li>Keep the CPU busy as much as possible.</li>
+            <li>Distribute CPU time fairly among processes.</li>
+            <li>Maximize throughput (more processes completed per unit time).</li>
+            <li>Minimize turnaround time (total time for a process to finish).</li>
+            <li>Minimize waiting time (time spent in the ready queue).</li>
+            <li>Minimize response time (time to produce the first output).</li>
 
         </p>
     </section>
@@ -86,17 +87,19 @@
         <br>
 
         <p><strong class="bold">Preemptive Scheduling</strong><br>
-            In Preemptive Scheduling, the tasks are mostly assigned with their priorities. Sometimes it is important to
-            run a task with a higher priority before another lower priority task, even if the lower priority task is
-            still running. The lower priority task holds for some time and resumes when the higher priority task
-            finishes its execution.<br>
+            In preemptive scheduling, tasks are given priorities. If a 
+            high-priority task arrives while a lower-priority task is 
+            running, the lower-priority task is paused. The high-priority 
+            task runs first, and the paused task continues once the 
+            high-priority task is done.<br>
             <br>
             <strong class="bold">Non-Preemptive Scheduling</strong><br>
-            In this type of scheduling method, the CPU has been allocated to a specific process. The process that keeps
-            the CPU busy will release the CPU either by switching context or terminating. It is the only method that can
-            be used for various hardware platforms. That’s because it doesn’t need special hardware (for example, a
-            timer) like preemptive scheduling.
-        </p>
+            In non-preemptive scheduling, once a process gets the CPU, it 
+            keeps it until it either finishes or voluntarily gives it up 
+            (like switching tasks). This method works on all hardware platforms
+             because, unlike preemptive scheduling, it doesn’t require special 
+             hardware like a timer.
+         </p>
     </section>
 
 
@@ -116,13 +119,14 @@
     <!-- FCFS -->
     <section class="container_docs" data-aos="zoom-in-up">
         <h2>First Come First Serve</h2>
-        <p>First Come First Serve is the full form of FCFS. It is the easiest and most simple CPU scheduling algorithm.
-            In this type of algorithm, the process which requests the CPU gets the CPU allocation first. This scheduling
-            method can be managed with a FIFO queue.<br><br>
+        <p>FCFS is the simplest CPU scheduling algorithm. 
+            Processes are served in the order they request the CPU,
+             like a "first-come, first-served" line. It works using a FIFO 
+             (First In, First Out) queue.<br><br>
 
-            As the process enters the ready queue, its PCB (Process Control Block) is linked with the tail of the queue.
-            So, when CPU becomes free, it should be assigned to the process at the beginning of the queue.</p>
-
+            When a process enters the queue, its Process Control Block (PCB) 
+            is added to the end. When the CPU is free, it goes to the process 
+            at the front of the queue.
         <h4>
             <li>Advantages</li>
         </h4>
@@ -189,10 +193,10 @@
     <!-- Round Robin -->
     <section class="container_docs" data-aos="zoom-in-up">
         <h2>Round-Robin Scheduling</h2>
-        <p>Round robin is the oldest, simplest scheduling algorithm. The name of this algorithm comes from the
-            round-robin principle, where each person gets an equal share of something in turn. It is mostly used for
-            scheduling algorithms in multitasking. This algorithm method helps for starvation free execution of
-            processes.<br><br></p>
+        <p>Round Robin is one of the oldest and simplest scheduling algorithms.
+            It works like taking turns—each process gets an equal share of CPU
+            time in a cycle. This method is commonly used in multitasking and
+            ensures that no process is left waiting forever (starvation-free execution).<br><br></p>
 
         <h4>
             <li>Advantages</li>
@@ -214,10 +218,10 @@
     <!-- SJF -->
     <section class="container_docs" data-aos="zoom-in-up">
         <h2>Shortest Job First</h2>
-        <p>SJF is a full form of (Shortest job first) is a scheduling algorithm in which the process with the shortest
-            execution time should be selected for execution next. This scheduling method can be preemptive or
-            non-preemptive. It significantly reduces the average waiting time for other processes awaiting
-            execution.<br></p>
+        <p>SJF is a scheduling algorithm where the process with the shortest
+             execution time is selected to run next. It can be either preemptive
+              or non-preemptive. This method helps reduce the average waiting
+               time for other processes waiting to execute.<br></p>
 
         <h4>
             <li>Advantages</li>
@@ -240,11 +244,11 @@
     <section class="footer">
         <div class="icons">
             <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Sri-Mayur"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/ayushi-varshney-9ba868250/"><i class="fab fa-linkedin"></i></a>
         </div>
 
-        <p>Made With <i class="far fa-heart"></i> by AEC-IT</p>
+        <p>Made With <i class="far fa-heart"></i> by Once in Blue Moon </p>
         <p>
             <i class="fa fa-copyright"></i> copyright 2024 || All rights reserved
         </p>
