@@ -1,5 +1,8 @@
 # CPU Scheduling Simulator Project - Frontend
 
+# LivePage
+https://sri-mayur.github.io/CPU-Scheduling-Simulator/
+
 ## Overview
 
 This repository contains the frontend implementation for a CPU Scheduling Algorithm Simulator Project, aiming to provide an interactive visualization of various CPU scheduling algorithms commonly used in operating systems.
